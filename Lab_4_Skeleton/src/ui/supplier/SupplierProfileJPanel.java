@@ -31,8 +31,10 @@ public class SupplierProfileJPanel extends javax.swing.JPanel {
     /**
      * Creates new form SupplierProfileJPanel
      */
-   private JPanel workArea;
-    private SupplierDirectory supplierDirectory;
+    private JPanel workArea;
+    private Supplier supplier;
+    //private SupplierDirectory supplierDirectory;
+    
     
     private final JFileChooser fileChooser = new JFileChooser();
     ImageIcon logoImage;
@@ -41,7 +43,8 @@ public class SupplierProfileJPanel extends javax.swing.JPanel {
         
         initComponents();
         this.workArea = workArea;
-        this.supplierDirectory = supplierDirectory;
+        this.supplier = supplier;
+        //this.supplierDirectory = supplierDirectory;
         
         FileFilter jpegFilter = new FileNameExtensionFilter("JPEG file", "jpg", "jpeg");
         FileFilter pngFilter = new FileNameExtensionFilter("PNG file", "png", "png");
@@ -213,8 +216,9 @@ public class SupplierProfileJPanel extends javax.swing.JPanel {
     private void btnAddSupplierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddSupplierActionPerformed
         // TODO add your handling code here:
         
-        Supplier supplier = supplierDirectory.addSupplier();
+        //Supplier supplier = supplierDirectory.addSupplier();
         supplier.setSupplyName(txtName.getText());
+        supplier.setDescription(jTextArea1.getText());
         supplier.setLogoImage(logoImage);
         
         JOptionPane.showMessageDialog(this, "Supplier Profile Updated successfully added", "Warning", JOptionPane.INFORMATION_MESSAGE);

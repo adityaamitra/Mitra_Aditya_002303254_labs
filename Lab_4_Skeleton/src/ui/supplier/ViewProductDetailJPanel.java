@@ -261,9 +261,11 @@ public class ViewProductDetailJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void saveFeatures() {
+        
        DefaultTableModel model = (DefaultTableModel) tblFeatures.getModel();
        
        for(int i = 0; i < model.getRowCount(); i++) {
+           
            Feature currentFeature = product.getFeatures().get(i);
            currentFeature.setName(tblFeatures.getValueAt(i, 0).toString());
            currentFeature.setValue(tblFeatures.getValueAt(i, 1));
@@ -273,8 +275,8 @@ public class ViewProductDetailJPanel extends javax.swing.JPanel {
     private void btnAddFeatureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddFeatureActionPerformed
         // TODO add your handling code here:
         Feature newFeature = product.addNewFeature();
-        newFeature.setName("New Features");
-        newFeature.setValue("Type Value Here");
+        newFeature.setName("Enter Feature Name ");
+        newFeature.setValue("Enter Feature Value ");
         
         saveFeatures();
         
@@ -300,6 +302,7 @@ public class ViewProductDetailJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnRemoveFeatureActionPerformed
 
     public void refreshTable() {
+        
         DefaultTableModel model = (DefaultTableModel) tblFeatures.getModel();
         model.setRowCount(0);
         

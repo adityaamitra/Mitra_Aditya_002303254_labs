@@ -18,6 +18,8 @@ public class Product {
     private int price;
     private ImageIcon logoImage;
     private int id;
+    private ArrayList<Feature> features;
+    private static int count = 0;
 
     public ImageIcon getLogoImage() {
         return logoImage;
@@ -52,9 +54,9 @@ public class Product {
         Product.count = count;
     }
     
-    private ArrayList<Feature> features;
+    
 
-    private static int count = 0;
+    
     
     public Product() {
         count++;
