@@ -61,7 +61,7 @@ public class ViewSupplier extends javax.swing.JPanel {
         productCatalog = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 255));
 
         lblSupplierName.setText("<Supplier Name>");
 
