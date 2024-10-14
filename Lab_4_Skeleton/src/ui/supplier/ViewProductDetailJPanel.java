@@ -136,6 +136,8 @@ public class ViewProductDetailJPanel extends javax.swing.JPanel {
             }
         });
 
+        imgLogo.setBackground(new java.awt.Color(204, 204, 204));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -260,6 +262,7 @@ public class ViewProductDetailJPanel extends javax.swing.JPanel {
 
     private void saveFeatures() {
        DefaultTableModel model = (DefaultTableModel) tblFeatures.getModel();
+       
        for(int i = 0; i < model.getRowCount(); i++) {
            Feature currentFeature = product.getFeatures().get(i);
            currentFeature.setName(tblFeatures.getValueAt(i, 0).toString());

@@ -17,6 +17,7 @@ public class Product {
     private String name;
     private int price;
     private ImageIcon logoImage;
+    private int id;
 
     public ImageIcon getLogoImage() {
         return logoImage;
@@ -33,7 +34,6 @@ public class Product {
     public void setId(int id) {
         this.id = id;
     }
-    private int id;
 
 
     public ArrayList<Feature> getFeatures() {
@@ -71,10 +71,6 @@ public class Product {
     public void setName(String name) {
         this.name = name;
     }
-
-
-    
-    
     
     
     public int getPrice() {
@@ -92,9 +88,9 @@ public class Product {
     }
 
     public Feature addNewFeature() {
-        
-        return null;
-        
+        Feature n = new Feature(this);
+        features.add(n);
+        return n;
     }
     
 }

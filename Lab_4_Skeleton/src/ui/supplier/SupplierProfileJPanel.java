@@ -212,9 +212,10 @@ public class SupplierProfileJPanel extends javax.swing.JPanel {
 
     private void btnAddSupplierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddSupplierActionPerformed
         // TODO add your handling code here:
-        Supplier supplier1 = supplierDirectory.addSupplier();
-        supplier1.setSupplyName(txtName.getText());
-        supplier1.setLogoImage(logoImage);
+        
+        Supplier supplier = supplierDirectory.addSupplier();
+        supplier.setSupplyName(txtName.getText());
+        supplier.setLogoImage(logoImage);
         
         JOptionPane.showMessageDialog(this, "Supplier Profile Updated successfully added", "Warning", JOptionPane.INFORMATION_MESSAGE);
         backAction();
