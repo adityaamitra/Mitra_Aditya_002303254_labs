@@ -36,6 +36,7 @@ public class SearchResultJPanel extends javax.swing.JPanel {
         lblProductId = new javax.swing.JLabel();
         btnSave = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(153, 255, 255));
         setPreferredSize(new java.awt.Dimension(650, 600));
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
