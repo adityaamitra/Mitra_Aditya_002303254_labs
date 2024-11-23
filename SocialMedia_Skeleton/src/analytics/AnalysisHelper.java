@@ -66,5 +66,30 @@ public class AnalysisHelper {
         
         System.out.println("Post With Most Comments " + postWithMostComments.getPostId());
     }
+    public void getPassiveUsers() {
+        DataStore data = DataStore.getInstance(); 
+        
+        HashMap<Integer, Integer> postNumbers = new HashMap<Integer, Integer>();
+        
+        for (Post p: data.getPosts().values()) {
+            
+ 
+            int userId = p.getUserId();
+            if (postNumbers.containsKey(userId)) {
+                postNumbers. put(userId, postNumbers.get(userId) + 1);
+            } else {
+                postNumbers.put(userId, 1);
+            }
+            
+        }
+        
+        ArrayList<User> users = new ArrayList(data.getUsers().values());
+        
+        Collections.sort(users, new UserMapComparator(postNumbers));
+        System. out.println("Below Users Have The Least Posts: ");
+        for (int i = 0; i < 5; i++) {
+        System. out. println (users.get(i) + ", - Post count: " + postNumbers.get(users.get(i).getId()));
+        }
+    }
     
 }
